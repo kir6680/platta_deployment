@@ -1,0 +1,18 @@
+﻿@model List<Car>
+
+    <div class="col-3 panel panel-info">
+        <div class="panel-heading">
+            
+                <h3 class="panel-title"><span class="glyphicon glyphicon glyphicon-info-sign" aria-hidden="true"></span>   Top Car Models</h3>
+            
+        </div>
+        <div class="panel-body">
+            <ul class="pager">
+               @foreach (var car in Model)
+               {
+                    <li><a href="#">@car.Model</a></li>
+                }
+            </ul>
+        </div>
+        <div class="panel-footer"></div>
+</div>

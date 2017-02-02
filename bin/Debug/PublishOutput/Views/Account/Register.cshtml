@@ -1,0 +1,32 @@
+﻿@model RegisterUserViewModel
+
+@{ ViewBag.Title = "Register";
+    }
+
+<h1>Register</h1>
+
+<form method="post" asp-antiforgery="true">
+    <div asp-validation-summary="ModelOnly" class="panel panel-warning">
+
+    </div>
+    <div class="panel panel-primary" style="width:450px">
+        <div class="input-group">
+            <label asp-for="Username" class="input-group-addon" style="width:150px"></label>
+            <input asp-for="Username" class="form-control" aria-describedby="basic-addon3" style="width:300px" />
+            <span asp-validation-for="Username"></span>
+        </div>
+        <div class="input-group">
+            <label asp-for="Password" class="input-group-addon" style="width:150px"></label>
+            <input asp-for="Password" class="form-control" aria-describedby="basic-addon3" style="width:300px"/>
+            <span asp-validation-for="Password"></span>
+        </div>
+        <div class="input-group">
+            <label asp-for="ConfirmPassword" class="input-group-addon" style="width:150px"></label>
+            <input asp-for="ConfirmPassword" class="form-control" aria-describedby="basic-addon3" style="width:300px" />
+            <span asp-validation-for="ConfirmPassword"></span>
+        </div>
+        <div >
+            <input type="submit" value="Register" class="btn btn-primary btn-block" />
+        </div>
+    </div>
+</form>

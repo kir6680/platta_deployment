@@ -1,0 +1,19 @@
+[{
+	"Product" : "Shoes",
+		"Count" : "5"
+	}, {
+		"Product" : "Shirts",
+		"Count" : "9"
+	}, {
+		"Product" : "Pants",
+		"Count" : "3"
+	}, {
+		"Product" : "Ties",
+		"Count" : "1"
+	}, {
+		"Product" : "Socks",
+		"Count" : "7"
+	}, {
+		"Product" : "Jackets",
+		"Count" : "7"
+	}]

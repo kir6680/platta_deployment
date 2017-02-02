@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Car>
+@{ 
+    var firstcar = Model.First();
+}
+    <div calss="panel panel-info" style="border:#0099CC solid 2px ">
+        <div class="panel-heading" style="background-color :#0099CC">
+            <h4 class="panel-title" style="color:white;font-size:small "><b>Car List</b></h4>
+        </div>
+        <div class="panel-body"  data-offset="20" data-spy="scroll" style="overflow-y:scroll;height:250px;font-size:smaller">
+            @if(Model.Count() > 0)
+            { 
+              <table class="table table-hover">
+                <tr>
+                    <td><b>Model</b></td>
+                    <td><b>Make</b></td>
+                    <td><b>Year of manufactoring</b></td>
+                    <td><b>Details</b></td>
+                </tr>
+                @foreach (var car in Model)
+            {
+                    <tr>
+                        <td>@car.Model</td>
+                        <td>@car.Make</td>
+                        <td>@car.YOM</td>
+                        <td><a asp-action="Details" asp-route-id="@car.Id">Details</a></td>
+                    </tr>
+                }
+            </table>
+            }
+            else
+            {
+                <div class="label label-info">No cars found.</div>
+
+            }
+        </div>
+            <div style="background-color:#0099CC;"><a class="btn btn-primary" style="margin:3px; font-weight:bold;font-size:small" asp-action="Create">Create</a></div>
+       
+        </div>

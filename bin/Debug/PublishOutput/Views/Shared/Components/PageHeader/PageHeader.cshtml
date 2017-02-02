@@ -1,0 +1,26 @@
+﻿<div class="navbar navbar-stacked navbar-fixed-top" >
+    
+    <div class="panel-body">
+        @if (User.Identity.IsAuthenticated)
+        {
+
+            <div style="float:left"><span class="btn btn-info">Hello @User.Identity.Name!</span></div>
+            <div style="float:right">
+                <form method="post" asp-controller="Account" asp-action="Logout" asp-antiforgery="true">
+                    <input type="submit" class="btn btn-info" value="Logout" />
+                </form>
+            </div>
+            
+        }
+        else
+        {
+            <div style="float:right">
+                <form method="post" asp-controller="Account" asp-action="Login" asp-antiforgery="true">
+                    <input type="submit" class="btn btn-info" value="Login" />
+                </form>
+            </div>
+            
+        }
+    </div>
+    <div style="float:right;margin-right:16px"><a class="glyphicon glyphicon-home btn btn-info" asp-action="Index" asp-controller="Main"></a></div>
+    </div>

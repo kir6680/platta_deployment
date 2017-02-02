@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+
+</head>
+<body class="container">
+    <header>       
+            <div class="container">
+                @await Component.InvokeAsync("PageHeader")
+            </div>  
+          
+    </header>
+    <div class="container" style="margin-top:100px;width:700px">
+        @RenderBody()
+    </div>
+    <div class="container" style="margin-top:10px;width:700px;">
+           @await Component.InvokeAsync("CarStats")
+    </div>
+    <div>
+        <link src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js" rel="text/javascript" />
+        <link src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" rel="text/javascript" />
+    </div>
+</body>
+</html>

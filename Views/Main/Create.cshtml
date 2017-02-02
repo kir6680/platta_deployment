@@ -1,0 +1,32 @@
+﻿@model Car
+    <div>
+        @using (Html.BeginForm())
+        {
+            <div class="panel panel-default">
+                <div class="panel-heading"><h3>Enter new car</h3></div>
+                <div class="panel-body">
+                    <div class="form-group row">                        
+                            @Html.LabelFor(m => m.Model, new { @class = "col-2 col-form-label" })                      
+                        <div class="col-10" >
+                            @Html.TextBoxFor(m => m.Model, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div clss="form-group row">
+                        @Html.LabelFor(m => m.Make, new { @class = "col-2 col-form-label" })
+                        <div class="col-10">
+                        @Html.TextBoxFor(m => m.Make, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div clss="form-group row">
+                        @Html.LabelFor(m => m.YOM, new { @class = "col-2 col-form-label" })
+                        <div class="col-10">
+                            @Html.TextBoxFor(m => m.YOM, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <input type="submit" value="save" />
+                </div>
+            </div>
+        }
+    </div>
