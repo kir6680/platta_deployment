@@ -4,26 +4,36 @@
     }
 
 <h1>Register</h1>
-
+<hr/>
 <form method="post" asp-antiforgery="true">
-    <div asp-validation-summary="ModelOnly" class="panel panel-warning">
-
+   
+    <div asp-validation-summary="ModelOnly" style="color:red">
     </div>
     <div class="panel panel-primary" style="width:450px">
         <div class="input-group">
             <label asp-for="Username" class="input-group-addon" style="width:150px"></label>
             <input asp-for="Username" class="form-control" aria-describedby="basic-addon3" style="width:300px" />
-            <span asp-validation-for="Username"></span>
+            <span asp-validation-for="Username" style="font-size:x-small" class="label-error"></span>
+        </div>
+        <div class="input-group">
+            <label asp-for="Email" class="input-group-addon" style="width:150px"></label>
+            <input asp-for="Email" class="form-control" aria-describedby="basic-addon3" style="width:300px" />
+            <span asp-validation-for="Email" style="font-size:x-small"></span>
         </div>
         <div class="input-group">
             <label asp-for="Password" class="input-group-addon" style="width:150px"></label>
             <input asp-for="Password" class="form-control" aria-describedby="basic-addon3" style="width:300px"/>
-            <span asp-validation-for="Password"></span>
+            <span asp-validation-for="Password" style="font-size:x-small"></span>
         </div>
         <div class="input-group">
             <label asp-for="ConfirmPassword" class="input-group-addon" style="width:150px"></label>
             <input asp-for="ConfirmPassword" class="form-control" aria-describedby="basic-addon3" style="width:300px" />
-            <span asp-validation-for="ConfirmPassword"></span>
+            <span asp-validation-for="ConfirmPassword" style="font-size:x-small"></span>
+        </div>
+        <div class="input-group">
+            <label asp-for="MembershipCode" class="input-group-addon" style="width:150px"></label>
+            <input asp-for="MembershipCode" class="form-control" aria-describedby="basic-addon3" style="width:300px" />
+            <span asp-validation-for="MembershipCode" style="font-size:x-small"></span>
         </div>
         <div >
             <input type="submit" value="Register" class="btn btn-primary btn-block" />
